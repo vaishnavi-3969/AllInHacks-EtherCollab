@@ -89,7 +89,7 @@ const Hero = ({ titleData, createCampaign }) => {
                           ...campaign,
                           title: e.target.value,
                         })}
-                      placeholder="title"
+                      placeholder="eg. Metamask"
                       required
                       type="text"
                       className="flex-grow w-full h-12 px-4 
@@ -112,7 +112,7 @@ const Hero = ({ titleData, createCampaign }) => {
                           ...campaign,
                           description: e.target.value,
                         })}
-                      placeholder="description"
+                      placeholder="eg. https://github.com/metamask/metamask"
                       required
                       type="text"
                       className="flex-grow w-full h-12 px-4 
@@ -135,7 +135,7 @@ const Hero = ({ titleData, createCampaign }) => {
                           ...campaign,
                           amount: e.target.value,
                         })}
-                      placeholder="amount"
+                      placeholder="eg. 1000"
                       required
                       type="text"
                       className="flex-grow w-full h-12 px-4 
@@ -158,7 +158,7 @@ const Hero = ({ titleData, createCampaign }) => {
                           ...campaign,
                           deadline: e.target.value,
                         })}
-                      placeholder="Date"
+                      placeholder="17-12-2023"
                       required
                       type="date"
                       className="flex-grow w-full h-12 px-4 

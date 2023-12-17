@@ -19,7 +19,7 @@ const Card = ({ allcampaign, setOpenModel, setDonate, title }) => {
   };
 
   return (
-    <div className="px-4 py-16 mx-auto sm-max-w-xl
+    <div className="px-4 py-16 mx-auto sm-max-w-xl 
     md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
       <p className="py-16 text-2xl font-bold leading-5">
         {title}
@@ -31,7 +31,7 @@ const Card = ({ allcampaign, setOpenModel, setDonate, title }) => {
               onClick={() => (setDonate(campaign), setOpenModel(true))}
               key={i + 1}
               className="cursor-pointer border overflow-hidden
-        transition-shadow duration-300 bg-white rounded"
+        transition-shadow duration-300 bg-[#E5E5E5] rounded-lg hover:shadow-lg border-black"
             >
               <img
                 src="https://cdn.pixabay.com/photo/2021/12/30/13/46/ethereum-6903942_1280.png"
