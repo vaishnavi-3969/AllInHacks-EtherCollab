@@ -47,16 +47,13 @@ const Hero = ({ titleData, createCampaign }) => {
           <div className="flex flex-col items-center justify-between xl:flex-row">
             <div className="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
               <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-5xl sm:leading-none">
-                Pursuit Coin
                 <br className="hidden md:block" />
-                Seed Pursuit Crowdfunding
+                EtherCollab
               </h2>
               <p className="max-w-xl mb-4 text-base text-gray-200 md:text-lg">
-                Pursuit Coin is a decentralized cryptocurrency that is built on
+                EtherCollab is a decentralized cryptocurrency that is built on
                 the Ethereum blockchain. It is a utility token that is used to
-                power the Pursuit Coin ecosystem. Pursuit Coin is a cryptocurrency
-                that is used to power the Pursuit Coin ecosystem. It is a utility
-                token that is used to power the Pursuit Coin ecosystem.
+                power the innovative ideas ecosystem.
               </p>
               <a
                 href="/"
@@ -77,14 +74,14 @@ const Hero = ({ titleData, createCampaign }) => {
             <div className="w-full max-w-xl xl:px-8 xl:w-5/12 ">
               <div className="bg-white rounded shadow-2xl p-7 sm:p-10">
                 <h3 className="mb-4 text-xl font-semibold sm:text-center sm:mb-6 sm:text-2xl">
-                  Seed Funding Campaign
+                  Register your project 
                 </h3>
                 <form>
                   <div className="mb-1 sm:mb-2">
                     <label
                       htmlFor="firstName"
                       className="inline-block mb-1 font-medium">
-                      Startup/Idea Title
+                      Project Title
                     </label>
                     <input
                       onChange={(e) =>
@@ -107,7 +104,7 @@ const Hero = ({ titleData, createCampaign }) => {
                     <label
                       htmlFor="lastName"
                       className="inline-block mb-1 font-medium">
-                      Seed Pursuit Link of your startup/idea
+                      Github Link to your Project
                     </label>
                     <input
                       onChange={(e) =>
@@ -184,7 +181,7 @@ const Hero = ({ titleData, createCampaign }) => {
                     </button>
                   </div>
                   <p className="text-xs text-gray-600 sm:text-sm">
-                    Register your Startup Idea for raising funds
+                    Register your Github Project for raising ETH funds
                   </p>
                 </form>
               </div>
