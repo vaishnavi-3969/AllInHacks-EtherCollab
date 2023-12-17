@@ -3,9 +3,14 @@ import pandas as pd
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 from openai import OpenAI, RateLimitError
+import os
+
+# Get the directory of the script
+script_directory = os.path.dirname(os.path.abspath(__file__))
 
 # Load the dataset
-repo_data = pd.read_csv('github_dataset.csv')
+repo_data_path = os.path.join(script_directory, 'github_dataset.csv')
+repo_data = pd.read_csv(repo_data_path)
 
 # Handle missing values
 repo_data.fillna(repo_data['language'].mode()[0], inplace=True)
@@ -38,7 +43,7 @@ for i, repo in enumerate(top_repositories, start=1):
 st.header("Getting started with Open Source?")
 
 # Load OpenAI model
-openai_key = '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'
+openai_key = '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'
 openai = OpenAI(api_key=openai_key)
 
 # User-provided prompt
