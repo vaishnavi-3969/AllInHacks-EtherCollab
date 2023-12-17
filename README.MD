@@ -19,7 +19,7 @@ Empowering decentralized open-source collaboration with Ethereum-based sponsorsh
 <h1>Tech Stack</h1>
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=nextsj,tailwind,git,github,solidity,py" />
+    <img src="https://skillicons.dev/icons?i=nextjs,tailwind,git,github,solidity,py" />
   </a>
   + Hardhat , Streamlit
 </p>
