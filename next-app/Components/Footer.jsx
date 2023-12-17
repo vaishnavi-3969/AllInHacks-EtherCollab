@@ -3,8 +3,8 @@ import React from "react";
 const Footer = () => {
   const productList = ["Market", "ERC20 Token", "Donation"];
   const contactlist = [
-    'support@pursuitcoin.com',
-    'info@seedpursuit.com',
+    'support@ethercollab.co',
+    'info@ethercollab.co',
     "Contact us"
   ];
   const usefulLink = ["Home", "About Us", "Company Bio"];
@@ -17,11 +17,10 @@ const Footer = () => {
               Pursuit Coin
             </h6>
             <p>
-              Pursuit Coin is a decentralized cryptocurrency that is built on
+              EtherCollab is a decentralized cryptocurrency that is built on
               the Ethereum blockchain. It is a utility token that is used to
-              power the Pursuit Coin ecosystem. Pursuit Coin is a cryptocurrency
-              that is used to power the Pursuit Coin ecosystem. It is a utility
-              token that is used to power the Pursuit Coin ecosystem.
+              power the EtherCollab ecosystem. It is a utility
+              token that is used to power the Github Projects ecosystem.
             </p>
           </div>
           <div className="">
@@ -71,7 +70,7 @@ const Footer = () => {
       <div className="backgroundMain p-6 text-center">
         <span>© 2023 Copyright:</span>
         <a className="font-semibold" href="https://tailwind-elements.com">
-          Pursuit Coin
+          EtherCollab
         </a>
       </div>
     </footer>
