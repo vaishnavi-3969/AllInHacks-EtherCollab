@@ -3,7 +3,11 @@ import pandas as pd
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 from openai import OpenAI, RateLimitError
+from dotenv import load_dotenv
 import os
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Get the directory of the script
 script_directory = os.path.dirname(os.path.abspath(__file__))
@@ -43,7 +47,7 @@ for i, repo in enumerate(top_repositories, start=1):
 st.header("Getting started with Open Source?")
 
 # Load OpenAI model
-openai_key = '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'
+openai_key = os.getenv('OPENAI_API_KEY')
 openai = OpenAI(api_key=openai_key)
 
 # User-provided prompt
@@ -55,5 +59,4 @@ if prompt := st.text_area("Ask away"):
             st.write(completion.choices[0].text)
             st.write(completion.model_dump_json(indent=2))
         except RateLimitError:
-            st.error("Oops! It seems we are experiencing high demand. Please try again later. In the meantime, you can explore this [practical guide to getting started with Open Source](https://www.freecodecamp.org/news/a-practical-guide-to-start-opensource-contributions/).")
-
+            st.error("Oops! It seems we are experiencing high demand. Please try again later. In the meantime, you can explore this [practical guide to getting started with Open Source](https://www.freecodecamp.org/news/a-practical-guide-to-start-opensource-contributions/)")
