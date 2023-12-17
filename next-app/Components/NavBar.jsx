@@ -7,8 +7,6 @@ const NavBar = () => {
   const { currentAccount, connectWallet } = useContext(CrowdFundingContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const menulist = ["White Paper", "Project", "Donation", "Members"];
-
   return (
     <div className="backgroundMain">
       <div className="px-4 py-5 mx-auto sm: max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
@@ -19,24 +17,29 @@ const NavBar = () => {
               aria-label="Company"
               title="Company"
               className="inline-flex items-center mr-8">
-              <Logo color="text-white" />
-              <span className="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
-                Pursuit Coin
-              </span>
+              <Logo />
             </a>
             <ul className="flex items-center hidden space-x-8 lg:flex">
-              {menulist.map((menu, index) => (
-                <li key={index + 1}>
-                  <a
-                    href="/"
-                    aria-label="Our product"
-                    title="Our product"
-                    className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
-                  >
-                    {menu}
-                  </a>
-                </li>
-              ))}
+              <li >
+                <a
+                  href="/about-us"
+                  aria-label="Our product"
+                  title="Our product"
+                  className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                >
+                  About Us
+                </a>
+              </li>
+              <li >
+                <a
+                  href="/ether-colab-gpt"
+                  aria-label="Our product"
+                  title="Our product"
+                  className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                >
+                  EtherCollabGPT
+                </a>
+              </li>
             </ul>
           </div>
           {currentAccount ? (
@@ -86,18 +89,18 @@ const NavBar = () => {
                           title="Company"
                           className="inline-flex items-center"
                         >
-                          <Logo color="text-gray-900" />
+                          <img src="https://ibb.co/znwtVn1" />
                           <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                            Pursuit Coin
+                            EtherCollab
                           </span>
                         </a>
                       </div>
                       <div>
                         <button
-                        aria-label="Close Menu"
-                        title="Close Menu"
-                        className="p-2 transition duration-200 rounded focus:outline-none focus:shadow-outline"
-                        onClick={() =>setIsMenuOpen(false)}
+                          aria-label="Close Menu"
+                          title="Close Menu"
+                          className="p-2 transition duration-200 rounded focus:outline-none focus:shadow-outline"
+                          onClick={() => setIsMenuOpen(false)}
                         >
                           <svg className="w-5 text-gray-600 hover:text-gray-900" viewBox="0 0 24 24">
                             <path
@@ -127,14 +130,14 @@ const NavBar = () => {
                         ))}
                         <li>
                           <a
-                          href="/"
-                          className="inline-flex items-center background
+                            href="/"
+                            className="inline-flex items-center background
                           justify-center w-full h-12 px-6 font-medium tracking-wide
                           text-white transition duration-200 rounded shadow-md
                           bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700
                           focus:shadow-outline focus:outline-none"
-                          aria-label="Sign Up"
-                          title="Sign Up"
+                            aria-label="Sign Up"
+                            title="Sign Up"
                           >
                             Connect Wallet
                           </a>

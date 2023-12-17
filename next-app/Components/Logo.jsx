@@ -2,11 +2,9 @@ import React from "react";
 
 const Logo = () => {
   return (
-    <img
-      src="./images/EtherCollab_Logo.png"
-      alt="logo"
-      className="w-12"
-    />
+    <img src="https://i.ibb.co/98jdH8J/Ether-Collab-Logo.png"
+      alt="Ether-Collab-Logo"
+      className="w-[80px] rounded-[50px]" />
   );
 };
 

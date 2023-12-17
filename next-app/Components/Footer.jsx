@@ -7,14 +7,14 @@ const Footer = () => {
     'info@ethercollab.co',
     "Contact us"
   ];
-  const usefulLink = ["Home", "About Us", "Company Bio"];
+  const usefulLink = ["Home", "About Us", "EtherCollabGPT"];
   return (
     <footer className="text-center text-white backgroundMain lg:text-left">
       <div className="mx-6 py-10 text-center md:text-left">
         <div className="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="">
             <h6 className="mb-4 flex-items justify-center font-semibold uppercase md:justify-start">
-              Pursuit Coin
+              EtherCollab
             </h6>
             <p>
               EtherCollab is a decentralized cryptocurrency that is built on

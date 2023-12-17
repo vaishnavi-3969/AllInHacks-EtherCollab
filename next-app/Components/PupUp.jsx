@@ -48,7 +48,7 @@ const PupUp = ({ setOpenModel, donate, donateFunction, getDonations }) => {
               {
                 <a href={donate.description} target="_blank">
                   <p className="my-4 text-purple-600 text-lg leading-relaxed">
-                    Link to Seed Profile: {donate.description}
+                    Link to Project: {donate.description}
                   </p>
                 </a>
               }

@@ -3,17 +3,19 @@ import React from "react";
 const Card = ({ allcampaign, setOpenModel, setDonate, title }) => {
   console.log(allcampaign);
 
-  // const daysLeft = (deadline) => {
-  //   const today = new Date().getTime();
-  //   const timeleft = deadline - today;
-  //   const days = timeleft / (1000 * 3600 * 24);
-  //   return Math.floor(days);
-  // }
 
   const daysLeft = (deadline) => {
     const difference = new Date(deadline).getTime() - Date.now();
     const remainingDays = difference / (1000 * 3600 * 24);
     return remainingDays.toFixed(0);
+  };
+  const calculateProgressBarStyle = (amountCollected, target) => {
+    const progressPercentage = (amountCollected / target) * 100;
+    const gradientColor = `linear-gradient(90deg, #34d399 ${progressPercentage}%, #f3f4f6 ${progressPercentage}%)`;
+
+    return {
+      backgroundImage: gradientColor,
+    };
   };
 
   return (
@@ -32,8 +34,8 @@ const Card = ({ allcampaign, setOpenModel, setDonate, title }) => {
         transition-shadow duration-300 bg-white rounded"
             >
               <img
-                src="https://images.pexels.com/photos/932638/pexels-photo-932638.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
-                className="object-cover w-full h-64 rounded"
+                src="https://cdn.pixabay.com/photo/2021/12/30/13/46/ethereum-6903942_1280.png"
+                className=" w-full h-64 rounded"
                 alt=""
               />
               <div className="py-5 pl-2">
@@ -53,6 +55,15 @@ const Card = ({ allcampaign, setOpenModel, setDonate, title }) => {
                 <p className="mb-4 text-gray-700">
                   {campaign.description}
                 </p>
+                <div className="border-2 rounded-full overflow-hidden">
+                  <div
+                    style={calculateProgressBarStyle(
+                      campaign.amountCollected,
+                      campaign.target
+                    )}
+                    className="h-5"
+                  />
+                </div>
                 <div className="flex space-x-4">
                   <p className="font-semibold">Target: {campaign.target} ETH</p>
                   <p className="font-semibold">Raised: {campaign.amountCollected} ETH</p>
