@@ -43,7 +43,7 @@ for i, repo in enumerate(top_repositories, start=1):
 st.header("Getting started with Open Source?")
 
 # Load OpenAI model
-openai_key = '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'
+openai_key = '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'
 openai = OpenAI(api_key=openai_key)
 
 # User-provided prompt
