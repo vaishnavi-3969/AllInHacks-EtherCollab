@@ -5,7 +5,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from openai import OpenAI, RateLimitError
 
 # Load the dataset
-repo_data = pd.read_csv('github_dataset.csv')
+repo_data = pd.read_csv('./github_dataset.csv')
 
 # Handle missing values
 repo_data.fillna(repo_data['language'].mode()[0], inplace=True)
