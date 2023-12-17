@@ -3,4 +3,3 @@ numpy
 pandas
 openai
 scikit-learn
-os
